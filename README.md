@@ -1,2 +1,2 @@
-# junos_automation
+# Junos Automation
  Learning Junos Automation.

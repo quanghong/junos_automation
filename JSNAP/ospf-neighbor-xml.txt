@@ -1,0 +1,31 @@
+ospf-neighbor-check {
+	command show ospf neighbor;
+	iterate ospf-neighbor {
+	id interface-name;
+#
+# test cases
+#
+}
+}
+
+
+root# run show ospf neighbor logical-system R5 | display xml 
+<rpc-reply xmlns:junos="http://xml.juniper.net/junos/14.1R1/junos">
+    <ospf-neighbor-information xmlns="http://xml.juniper.net/junos/14.1R1/junos-routing">
+        <ospf-neighbor>
+            <neighbor-address>10.1.5.1</neighbor-address>
+            <interface-name>ge-0/0/1.15</interface-name>
+            <ospf-neighbor-state>Full</ospf-neighbor-state>
+            <neighbor-id>1.1.1.1</neighbor-id>
+            <neighbor-priority>128</neighbor-priority>
+            <activity-timer>38</activity-timer>
+        </ospf-neighbor>
+    </ospf-neighbor-information>
+    <cli>
+        <banner>[edit logical-systems R5]</banner>
+    </cli>
+</rpc-reply>
+
+
+
+

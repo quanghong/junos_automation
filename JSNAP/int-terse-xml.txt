@@ -1,0 +1,28 @@
+root# run show interfaces ge-0/0/1.15 terse | display xml                       
+<rpc-reply xmlns:junos="http://xml.juniper.net/junos/14.1R1/junos">
+    <interface-information xmlns="http://xml.juniper.net/junos/14.1R1/junos-interface" junos:style="terse">
+        <logical-interface>
+            <name>ge-0/0/1.15</name>
+            <admin-status>up</admin-status>
+            <oper-status>up</oper-status>
+            <filter-information>
+            </filter-information>
+            <address-family>
+                <address-family-name>inet</address-family-name>
+                <interface-address>
+                    <ifa-local junos:emit="emit">10.1.5.5/24</ifa-local>
+                </interface-address>
+            </address-family>
+            <address-family>
+                <address-family-name junos:emit="emit">mpls</address-family-name>
+            </address-family>
+            <address-family>
+                <address-family-name>multiservice</address-family-name>
+            </address-family>
+        </logical-interface>
+    </interface-information>
+    <cli>
+        <banner>[edit logical-systems R5]</banner>
+    </cli>
+</rpc-reply>
+
